@@ -21,7 +21,7 @@ const Section2 = () => {
     }, []);
 
     return(
-        <section id="serviceSec2" className="container mt-5">
+        <section id="serviceSec2" className={`container mt-5 ${isMobile ? 'mobile-view' : ''}`}>
             <div className="row align-items-center">
                 <div className="col-md-6 order-2 order-md-1">
                     <div className="content_sec_2">

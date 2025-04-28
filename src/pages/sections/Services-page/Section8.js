@@ -22,7 +22,7 @@ const Section8 = () => {
   }, []);
 
   return (
-    <section id="serviceSec8" className="container">
+    <section id="serviceSec8" className={`container ${isMobile ? 'mobile-view' : ''}`}>
       <div className="row d-flex align-items-center">
         <div className="col-12 col-md-8 mb-4 mb-md-0">
           <div className="content_sec_5">

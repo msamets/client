@@ -21,7 +21,7 @@ const Section2 = () => {
   }, []);
 
   return (
-    <section id="featureSec2" className="container mt-5">
+    <section id="featureSec2" className={`container mt-5 ${isMobile ? 'mobile-view' : ''}`}>
       <div className="row">
         <div className="col-12">
           <div className="content_sec_2">

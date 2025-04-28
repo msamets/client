@@ -22,7 +22,7 @@ const Section8 = () => {
     }, []);
 
     return (
-        <section id="featureSec5" className="container py-5 mt-4 mt-md-5">
+        <section id="featureSec5" className={`container py-5 mt-4 mt-md-5 ${isMobile ? 'mobile-view' : ''}`}>
             <div className="row align-items-center">
                 <div className="col-12 col-md-8 mb-4 mb-md-0">
                     <div className='content_sec_5 px-3'>
