@@ -5,16 +5,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import axios from 'axios';
 
-// Set default base URL for axios in development
+// Set default base URL for axios based on environment
 if (process.env.NODE_ENV === 'development') {
-  axios.defaults.baseURL = 'http://localhost:5002';
+  axios.defaults.baseURL = 'https://client-kappa-plum-16.vercel.app';
+} else {
+  // In production, use relative paths
+  axios.defaults.baseURL = '/api';
 }
 
 // Configure axios defaults to prevent large headers and cookies
 axios.defaults.withCredentials = false; // Don't send cookies by default
 axios.defaults.headers.common = {
   'Content-Type': 'application/json',
-  // Include only necessary headers to avoid 431 errors
+  // Include host header in production
+  'Host': typeof window !== 'undefined' ? window.location.host : '',
 };
 
 // Remove unnecessary default headers that could contribute to request size

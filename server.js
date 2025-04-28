@@ -6,13 +6,14 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const app = express();
-const PORT = 5002; // Use a different port to avoid conflicts
+const PORT = process.env.PORT || 5002; // Use environment port or default to 5002
 
-// Very minimal middleware
+// Enhanced middleware for Vercel deployment
 app.use((req, res, next) => {
+  // Allow requests from any origin in both development and production
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Host');
 
   if (req.method === 'OPTIONS') {
     return res.status(204).end();
@@ -38,9 +39,13 @@ const createTransporter = () => {
   });
 };
 
-// Super minimal contact endpoint
-app.post('/minimal-contact', async (req, res) => {
-  console.log('Received contact form data with minimal server');
+// API endpoint for contact form - works with both direct and /api/ prefix
+app.post('/minimal-contact', handleContact);
+app.post('/api/minimal-contact', handleContact);
+
+// Contact form handler function
+async function handleContact(req, res) {
+  console.log('Received contact form data');
 
   try {
     const { firstName, lastName, email, phone, message } = req.body;
@@ -78,12 +83,12 @@ app.post('/minimal-contact', async (req, res) => {
     console.error('Error sending email:', error);
     res.json({ success: false, message: 'Failed to send email' });
   }
-});
+}
 
 // Start the server if running directly
 if (require.main === module) {
   app.listen(PORT, () => {
-    console.log(`Minimal server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
   });
 }
 
