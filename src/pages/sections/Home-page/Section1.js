@@ -29,7 +29,7 @@ const Section1 = () => {
                             <img src="./images/fireIcon.png" alt="icon" className="icon-img" />
                             <span className="gpu-text">&nbsp;Next-Level GPUaaS for Effortless Cloud Scaling</span>
                         </Link>
-                        <h1 className="mt-3 mt-md-4 hero-title">Revolutionize GPU Cloud Scaling with a Modern GPUaaS Platform</h1>
+                        <h1 className="mt-3 mt-md-4 hero-title custom-hero-size">Revolutionize GPU Cloud Scaling with a Modern GPUaaS Platform</h1>
                         <p className="mt-3 hero-subtitle">
                             Accelerate your cloud business with our single-agent GPU orchestration solution that simplifies operations, lowers costs, and delivers flexible, on-demand GPU capabilities.
                         </p>
@@ -107,11 +107,18 @@ const Section1 = () => {
                     transform: translateY(-2px);
                 }
 
-                .hero-title {
-                    font-size: 3rem;
-                    font-weight: 700;
-                    line-height: 1.2;
-                    color: #222;
+                .hero-title.custom-hero-size {
+                    font-family: 'Plus Jakarta Sans', sans-serif !important;
+                    font-weight: 600 !important;
+                    font-size: 50px !important;
+                    line-height: 60px !important;
+                    letter-spacing: 0px !important;
+                    text-align: center !important;
+                    vertical-align: middle !important;
+                    color: #222 !important;
+                    max-width: 900px !important;
+                    margin-left: auto !important;
+                    margin-right: auto !important;
                 }
 
                 .hero-subtitle {
@@ -142,8 +149,9 @@ const Section1 = () => {
                 }
 
                 @media (max-width: 1200px) {
-                    .hero-title {
-                        font-size: 2.5rem;
+                    .hero-title.custom-hero-size {
+                        font-size: 44px !important;
+                        line-height: 54px !important;
                         margin-top: 1rem;
                     }
 
@@ -163,8 +171,9 @@ const Section1 = () => {
                         margin-top: 12px;
                     }
 
-                    .hero-title {
-                        font-size: 2.25rem;
+                    .hero-title.custom-hero-size {
+                        font-size: 38px !important;
+                        line-height: 48px !important;
                         margin-top: 1rem;
                     }
 
@@ -190,8 +199,9 @@ const Section1 = () => {
                         margin-top: 20px;
                     }
 
-                    .hero-title {
-                        font-size: 1.75rem;
+                    .hero-title.custom-hero-size {
+                        font-size: 32px !important;
+                        line-height: 40px !important;
                     }
 
                     .gpuBtn {
@@ -223,8 +233,9 @@ const Section1 = () => {
                         margin-top: 15px;
                     }
 
-                    .hero-title {
-                        font-size: 1.5rem;
+                    .hero-title.custom-hero-size {
+                        font-size: 26px !important;
+                        line-height: 34px !important;
                         margin-top: 15px;
                         padding: 0 10px;
                     }
@@ -267,8 +278,9 @@ const Section1 = () => {
                         width: 18px;
                     }
 
-                    .hero-title {
-                        font-size: 1.35rem;
+                    .hero-title.custom-hero-size {
+                        font-size: 22px !important;
+                        line-height: 30px !important;
                     }
 
                     #homeSec1 {
