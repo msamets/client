@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { ANIMATION_PRESETS } from '../../../utils/AnimationUtils';
 
 const Section1 = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -25,15 +26,35 @@ const Section1 = () => {
             <div className='row'>
                 <div className='col col-lg-10 col-xl-9 mx-auto'>
                     <div className='content_sec_1 text-center'>
-                        <Link to="/" className="gpuBtn" style={{ borderRadius: '9px' }}>
+                        <Link
+                            to="/"
+                            className="gpuBtn"
+                            style={{ borderRadius: '9px' }}
+                            {...ANIMATION_PRESETS.FADE_DOWN}
+                            data-aos-delay="100"
+                        >
                             <img src="./images/fireIcon.png" alt="icon" className="icon-img" />
                             <span className="gpu-text">&nbsp;Next-Level GPUaaS for Effortless Cloud Scaling</span>
                         </Link>
-                        <h1 className="mt-3 mt-md-4 hero-title custom-hero-size">Revolutionize GPU Cloud Scaling with a Modern GPUaaS Platform</h1>
-                        <p className="mt-3 hero-subtitle">
+                        <h1
+                            className="mt-3 mt-md-4 hero-title custom-hero-size"
+                            {...ANIMATION_PRESETS.FADE_UP}
+                            data-aos-delay="200"
+                        >
+                            Revolutionize GPU Cloud Scaling with a Modern GPUaaS Platform
+                        </h1>
+                        <p
+                            className="mt-3 hero-subtitle"
+                            {...ANIMATION_PRESETS.FADE_UP}
+                            data-aos-delay="300"
+                        >
                             Accelerate your cloud business with our single-agent GPU orchestration solution that simplifies operations, lowers costs, and delivers flexible, on-demand GPU capabilities.
                         </p>
-                        <div className='banner_btn mt-4'>
+                        <div
+                            className='banner_btn mt-4'
+                            {...ANIMATION_PRESETS.FADE_UP}
+                            data-aos-delay="400"
+                        >
                             <Link
                                 to="#"
                                 data-bs-toggle="modal"

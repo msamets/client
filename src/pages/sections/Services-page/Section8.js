@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Home8 from "../Images/Home8.png";
 import { useState, useEffect } from 'react';
+import { ANIMATION_PRESETS } from '../../../utils/AnimationUtils';
 
 const Section8 = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -25,7 +26,11 @@ const Section8 = () => {
     <section id="serviceSec8" className={`container ${isMobile ? 'mobile-view' : ''}`}>
       <div className="row d-flex align-items-center">
         <div className="col-12 col-md-8 mb-4 mb-md-0">
-          <div className="content_sec_5">
+          <div
+            className="content_sec_5"
+            {...ANIMATION_PRESETS.FADE_RIGHT}
+            data-aos-delay="100"
+          >
             <h2>Ready to Explore a More Modern Approach?</h2>
             <p>
               Contact Us to discuss how our platform can transform your GPU
@@ -50,7 +55,11 @@ const Section8 = () => {
           </div>
         </div>
         <div className="col-12 col-md-4 text-center">
-          <div className="content_sec_5">
+          <div
+            className="content_sec_5"
+            {...ANIMATION_PRESETS.FADE_LEFT}
+            data-aos-delay="200"
+          >
             <img className="img-fluid" src={Home8} alt="GPU Cloud Strategy" />
           </div>
         </div>

@@ -1,9 +1,9 @@
-import  Home3 from "../Images/Home3.png";
-import  Home4 from "../Images/Home4.png";
-import  Home5 from "../Images/Home5.png";
-import  Home6 from "../Images/Home6.png";
-import  Home7 from "../Images/Home7.png";
-
+import Home3 from "../Images/Home3.png";
+import Home4 from "../Images/Home4.png";
+import Home5 from "../Images/Home5.png";
+import Home6 from "../Images/Home6.png";
+import Home7 from "../Images/Home7.png";
+import { ANIMATION_PRESETS } from '../../../utils/AnimationUtils';
 
 const Section3 = () => {
   return (
@@ -11,10 +11,18 @@ const Section3 = () => {
       <div className="row">
         <div className="col-md-12">
           <div className="content_sec_3">
-            <h2 className="text-center">
+            <h2
+              className="text-center"
+              {...ANIMATION_PRESETS.FADE_DOWN}
+              data-aos-delay="100"
+            >
               A Modern Way to Build and Scale Your GPU Cloud
             </h2>
-            <p className="text-center ">
+            <p
+              className="text-center"
+              {...ANIMATION_PRESETS.FADE_UP}
+              data-aos-delay="200"
+            >
               Accelerate your cloud business with a single-agent solution that
               simplifies operations, lowers costs, and delivers flexible,
               on-demand GPU (and CPU) capabilities—without the steep learning
@@ -25,9 +33,13 @@ const Section3 = () => {
       </div>
       <div className="row d-flex mt-20 mrgn_btm">
       <div className="col-12 col-sm-12 col-md-4 postItem">
-          <div className="content_sec_3">
+          <div
+            className="content_sec_3"
+            {...ANIMATION_PRESETS.FADE_RIGHT}
+            data-aos-delay="300"
+          >
             <img
-              className=" text-center img1"
+              className="text-center img1"
               src={Home3}
               alt="GPU Cloud Strategy"
             />
@@ -46,10 +58,13 @@ const Section3 = () => {
         </div>
 
         <div className="col-12 col-sm-12 col-md-4 postItem">
-          <div className="content_sec_3">
+          <div
+            className="content_sec_3"
+            {...ANIMATION_PRESETS.FADE_UP}
+            data-aos-delay="400"
+          >
             <img
-              className=" text-center img1"
-              // src="./images/sec_3_2.png"
+              className="text-center img1"
               src={Home4}
               alt="GPU Cloud Strategy"
             />
@@ -63,17 +78,20 @@ const Section3 = () => {
           </div>
         </div>
         <div className="col-12 col-sm-12 col-md-4 postItem">
-          <div className="content_sec_3">
+          <div
+            className="content_sec_3"
+            {...ANIMATION_PRESETS.FADE_LEFT}
+            data-aos-delay="300"
+          >
             <img
-              className=" text-center img1"
-             src={Home5}
-              // src="./images/sec_3_3.png"
+              className="text-center img1"
+              src={Home5}
               alt="GPU Cloud Strategy"
             />
             <h5 className="text-center">Flexible, Transparent Pricing</h5>
             <p className="text-center">
               With a low per-server, per-month subscription, you only pay for
-              what you actually use. There’s no minimum, no maximum, and no
+              what you actually use. There's no minimum, no maximum, and no
               lock-in contracts.
             </p>
           </div>
@@ -81,12 +99,14 @@ const Section3 = () => {
       </div>
       <div className="row d-flex mt-20">
       <div className="col-12 col-sm-12 col-md-6 postItem">
-          <div className="content_sec_3">
+          <div
+            className="content_sec_3"
+            {...ANIMATION_PRESETS.FADE_RIGHT}
+            data-aos-delay="200"
+          >
             <img
-              className=" text-center img1"
-              // src="./images/sec_3_4.png"
-             src={Home6}
-
+              className="text-center img1"
+              src={Home6}
               alt="GPU Cloud Strategy"
             />
             <h5 className="text-center">
@@ -94,18 +114,21 @@ const Section3 = () => {
             </h5>
             <p className="text-center">
               Our highly experienced team offers professional services,
-              deployment support, and ongoing consulting. Whether you’re
-              expanding a data center or spinning up a brand-new site, we’re
+              deployment support, and ongoing consulting. Whether you're
+              expanding a data center or spinning up a brand-new site, we're
               here to help.
             </p>
           </div>
         </div>
         <div className="col-12 col-sm-12 col-md-6 postItem">
-          <div className="content_sec_3">
+          <div
+            className="content_sec_3"
+            {...ANIMATION_PRESETS.FADE_LEFT}
+            data-aos-delay="200"
+          >
             <img
-              className=" text-center img1"
-              // src="./images/sec_3_5.png"
-             src={Home7}
+              className="text-center img1"
+              src={Home7}
               alt="GPU Cloud Strategy"
             />
             <h5 className="text-center">Secure Data Handling</h5>

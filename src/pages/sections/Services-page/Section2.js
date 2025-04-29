@@ -1,5 +1,6 @@
 import Service1 from "../Images/Service.png";
 import { useState, useEffect } from 'react';
+import { ANIMATION_PRESETS } from '../../../utils/AnimationUtils';
 
 const Section2 = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -25,31 +26,37 @@ const Section2 = () => {
             <div className="row align-items-center">
                 <div className="col-md-6 order-2 order-md-1">
                     <div className="content_sec_2">
-                        <h2>Deployment Model</h2>
-                        <p className="mb-4">
+                        <h2 {...ANIMATION_PRESETS.FADE_LEFT} data-aos-delay="100">Deployment Model</h2>
+                        <p className="mb-4" {...ANIMATION_PRESETS.FADE_LEFT} data-aos-delay="200">
                             We redefine how you roll out new regions or data centers. By centralizing most control services either in our cloud or on your premises, you avoid the capital expense and complexity typical of older solutions.
                         </p>
 
-                        <div className="feature-item mb-4">
+                        <div className="feature-item mb-4" {...ANIMATION_PRESETS.FADE_LEFT} data-aos-delay="300">
                             <h5>Install the Agent</h5>
                             <p>Run our single binary on your chosen hardware.</p>
                         </div>
 
-                        <div className="feature-item mb-4">
+                        <div className="feature-item mb-4" {...ANIMATION_PRESETS.FADE_LEFT} data-aos-delay="400">
                             <h5>Auto-Enrollment</h5>
                             <p>In a cloud-hosted setup, the agent connects securely to our management cloud. For fully on-prem deployments, it registers with your local control plane.</p>
                         </div>
 
-                        <div className="feature-item mb-4">
+                        <div className="feature-item mb-4" {...ANIMATION_PRESETS.FADE_LEFT} data-aos-delay="500">
                             <h5>Launch Workloads</h5>
                             <p>Use our intuitive web console or API to spin up containers, VMs, and more in minutes.</p>
                         </div>
 
-                        <p>No separate message queuing services. No large database clusters. No frustration—just a streamlined platform that adapts to your compliance and operational requirements.</p>
+                        <p {...ANIMATION_PRESETS.FADE_LEFT} data-aos-delay="600">No separate message queuing services. No large database clusters. No frustration—just a streamlined platform that adapts to your compliance and operational requirements.</p>
                     </div>
                 </div>
                 <div className="col-md-6 text-center order-1 order-md-2 mb-4 mb-md-0">
-                    <img src={Service1} className="img-fluid" alt="Deployment model" />
+                    <img
+                        src={Service1}
+                        className="img-fluid"
+                        alt="Deployment model"
+                        {...ANIMATION_PRESETS.FADE_RIGHT}
+                        data-aos-delay="100"
+                    />
                 </div>
             </div>
 

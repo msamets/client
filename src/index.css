@@ -337,27 +337,51 @@ section#featureSec5 {
 .content_sec_4_1 img {
   margin-bottom: 20px;
 }
+.content_sec_4 {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content_sec_4 h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.content_sec_4 .monetization_p {
+  margin-bottom: 30px;
+}
+
 .content_sec_4_2 {
   position: relative;
-  display: block;
-  float: left;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   border-radius: 20px;
   background: #fff;
-  padding-bottom: 250px !important;
-  border-bottom-right-radius: 0px;
-  padding: 40px 20px;
+  padding: 25px 5px;
+  overflow: hidden;
+}
+
+.content_sec_4_2 h6 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.content_sec_4_2 p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  padding: 0 5px;
 }
 
 .content_sec_4_2 img {
-  max-width: 320px;
-  position: absolute;
-  bottom: 0;
-  float: left;
-  right: 0;
+  max-width: 100%;
   display: block;
+  margin: 0 auto;
+  margin-top: auto;
 }
+
 .featurePage #featureSec4_4 img {
   border-radius: 20px;
 }
@@ -602,9 +626,8 @@ section#homeSec5 {
 }
 .content_sec_4_2 {
 	position: unset;
-
-	padding-bottom: 44px !important;
-
+	padding: 12px 5px;
+	padding-bottom: 10px !important;
 }
 #featureSec3 img{
   width: 100%;
@@ -612,6 +635,12 @@ section#homeSec5 {
 .font-40 {
 	font-size: 34px;
 	margin-bottom: 30px;
+}
+.content_sec_4 h2 {
+  font-size: 26px;
+}
+.content_sec_4_2 h6 {
+  font-size: 18px;
 }
 }
 
@@ -638,7 +667,6 @@ section#homeSec5 {
   section#homeSec5 {
     background: #F4F8FC;
     padding: 80px 40px;
-
   }
   h2{
     line-height: normal;
@@ -657,6 +685,14 @@ section#homeSec5 {
     margin-top: 0 !important;
   }
 
+  /* content_sec_4 responsive styles */
+  .content_sec_4 h2 {
+    font-size: 24px;
+  }
+
+  .content_sec_4_2 {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -681,11 +717,23 @@ section#homeSec5 {
     padding: 40px 40px;
     padding-bottom: 10px;
     border-radius: 10px;
-
   }
   .font-40 {
     font-size: 30px;
     margin-bottom: 30px;
+  }
+
+  /* content_sec_4 responsive styles */
+  .content_sec_4 {
+    padding: 0 10px;
+  }
+
+  .content_sec_4 h2 {
+    font-size: 22px;
+  }
+
+  .content_sec_4_2 {
+    padding: 10px 5px;
   }
 }
 

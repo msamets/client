@@ -72,7 +72,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="ft_copyright container mt-4">
+            <div className="ft_copyright container">
                 <div className="row">
                     <div className='col-md-12 text-center'>
                         © 2025 xcloudify. All rights reserved.

@@ -201,7 +201,7 @@ const Header = ({ pageTitle }) => {
             document.body.style.overflow = '';
             document.body.style.paddingRight = '';
           }
-        }, 350); // Slightly longer than Bootstrap's transition time
+        }, 100); // Slightly longer than Bootstrap's transition time
       };
 
       let modalElement = document.getElementById('exampleModal');
@@ -268,7 +268,7 @@ const Header = ({ pageTitle }) => {
       // Wait for drawer animation to complete before showing modal
       setTimeout(() => {
         showModal();
-      }, 300); // Match this to the drawer transition time
+      }, 100); // Match this to the drawer transition time
     } else {
       // If drawer isn't open, show modal immediately
       showModal();
@@ -413,7 +413,7 @@ const Header = ({ pageTitle }) => {
           }
 
           .modal-backdrop.fade {
-            transition: opacity 0.15s linear;
+            transition: opacity 0.10s linear;
           }
 
           /* Header background and positioning */
@@ -531,7 +531,7 @@ const Header = ({ pageTitle }) => {
           @media (max-width: 991px) {
             /* Sticky navbar styles */
             .mobile-navbar {
-              transition: all 0.3s ease;
+              transition: all 0.10s ease;
             }
 
             .sticky-navbar {
@@ -556,7 +556,7 @@ const Header = ({ pageTitle }) => {
               width: 100vw;
               display: flex;
               flex-direction: column;
-              transition: all 0.3s ease-in-out;
+              transition: all 0.10s ease-in-out;
               padding: 0;
               overflow-y: auto;
               margin-top: 76px; /* Height of navbar - adjust as needed */
@@ -585,7 +585,7 @@ const Header = ({ pageTitle }) => {
               margin: 0;
               padding: 0.3rem 0;
               position: relative;
-              transition: all 0.3s ease;
+              transition: all 0.10s ease;
             }
 
             .mobile-nav-items .nav-item:last-of-type {
@@ -599,7 +599,7 @@ const Header = ({ pageTitle }) => {
               text-align: left;
               padding: 0.5rem 0;
               position: relative;
-              transition: all 0.3s ease;
+              transition: all 0.10s ease;
               display: flex;
               align-items: center;
               justify-content: space-between;
@@ -631,7 +631,7 @@ const Header = ({ pageTitle }) => {
               color: #007bff;
               opacity: 0;
               transform: translateX(-10px);
-              transition: all 0.3s ease;
+              transition: all 0.10s ease;
             }
 
             .mobile-nav-items .nav-link:hover .nav-item-arrow,
@@ -655,7 +655,7 @@ const Header = ({ pageTitle }) => {
               color: white !important;
               text-align: center;
               box-shadow: 0 4px 15px rgba(115, 54, 255, 0.25);
-              transition: all 0.3s ease;
+              transition: all 0.10s ease;
               display: inline-block;
               width: 100%;
             }
@@ -686,7 +686,7 @@ const Header = ({ pageTitle }) => {
               color: #555;
               font-size: 0.9rem;
               text-decoration: none;
-              transition: color 0.3s ease;
+              transition: color 0.10s ease;
             }
 
             .social-link:hover {
@@ -711,7 +711,7 @@ const Header = ({ pageTitle }) => {
               display: flex;
               align-items: center;
               justify-content: center;
-              transition: all 0.3s ease;
+              transition: all 0.10s ease;
             }
 
             .custom-toggler:focus {
@@ -729,7 +729,7 @@ const Header = ({ pageTitle }) => {
               background-repeat: no-repeat;
               background-position: center;
               background-size: 100%;
-              transition: all 0.3s ease;
+              transition: all 0.10s ease;
             }
 
             /* Cross icon styles */
@@ -778,7 +778,7 @@ const Header = ({ pageTitle }) => {
               position: relative;
               padding: 0.5rem 0;
               margin: 0 0.5rem;
-              transition: color 0.3s ease;
+              transition: color 0.10s ease;
             }
 
             .nav-link:hover {

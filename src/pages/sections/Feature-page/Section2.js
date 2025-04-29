@@ -1,5 +1,6 @@
 import Feature1 from "../Images/Feature1.png";
 import { useState, useEffect } from 'react';
+import { ANIMATION_PRESETS } from '../../../utils/AnimationUtils';
 
 const Section2 = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -25,10 +26,18 @@ const Section2 = () => {
       <div className="row">
         <div className="col-12">
           <div className="content_sec_2">
-            <h2 className="text-center">
+            <h2
+              className="text-center"
+              {...ANIMATION_PRESETS.FADE_DOWN}
+              data-aos-delay="100"
+            >
               Single-Agent, Multi-Cloud Simplicity
             </h2>
-            <p className="text-center px-md-3">
+            <p
+              className="text-center px-md-3"
+              {...ANIMATION_PRESETS.FADE_UP}
+              data-aos-delay="200"
+            >
               Most legacy orchestration platforms require multiple
               interdependent services deployed per region. Our solution
               consolidates all essential control services into a single agent
@@ -41,7 +50,11 @@ const Section2 = () => {
 
       <div className="row d-flex align-items-center mt-4 mt-md-5">
         <div className="col-12 col-md-6 order-2 order-md-1 mt-4 mt-md-0">
-          <div className="row">
+          <div
+            className="row"
+            {...ANIMATION_PRESETS.FADE_RIGHT}
+            data-aos-delay="300"
+          >
             <div className="col-12 mb-4">
               <h5>Easy Installation</h5>
               <p>
@@ -50,7 +63,11 @@ const Section2 = () => {
               </p>
             </div>
           </div>
-          <div className="row">
+          <div
+            className="row"
+            {...ANIMATION_PRESETS.FADE_RIGHT}
+            data-aos-delay="400"
+          >
             <div className="col-12 mb-4">
               <h5>Instant Enrollment</h5>
               <p>
@@ -60,7 +77,11 @@ const Section2 = () => {
               </p>
             </div>
           </div>
-          <div className="row">
+          <div
+            className="row"
+            {...ANIMATION_PRESETS.FADE_RIGHT}
+            data-aos-delay="500"
+          >
             <div className="col-12">
               <h5>Reduced Operational Overhead</h5>
               <p>
@@ -71,7 +92,13 @@ const Section2 = () => {
           </div>
         </div>
         <div className="col-12 col-md-6 order-1 order-md-2 text-center">
-          <img src={Feature1} className="img-fluid" alt="feature 3" />
+          <img
+            src={Feature1}
+            className="img-fluid"
+            alt="feature 3"
+            {...ANIMATION_PRESETS.FADE_LEFT}
+            data-aos-delay="300"
+          />
         </div>
       </div>
 

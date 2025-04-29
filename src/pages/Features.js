@@ -91,7 +91,7 @@ const Features = () => {
         }
 
         .content_sec_1, .content_sec_2, .content_sec_3, .content_sec_4, .content_sec_5 {
-            max-width: 950px;
+            max-width: 1300px;
             margin: 0 auto;
             position: relative;
             z-index: 1;

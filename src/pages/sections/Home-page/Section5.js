@@ -1,22 +1,35 @@
 import { Link } from 'react-router-dom';
 import Home8 from "../Images/Home8.png";
+import { ANIMATION_PRESETS } from '../../../utils/AnimationUtils';
 
 const Section5 = () => {
     return (
         <section id="homeSec5" className="container ">
             <div className="row d-flex mt-20">
-
-
                 <div className="col-12 col-sm-12 col-md-7 mb-5">
-                    <div className='content_sec_5'>
+                    <div
+                        className='content_sec_5'
+                        {...ANIMATION_PRESETS.FADE_RIGHT}
+                        data-aos-delay="100"
+                    >
                         <h2>Ready to Explore a More Modern Approach?</h2>
                         <p>Contact Us to discuss how our platform can transform your GPU cloud strategy.</p>
-                        <Link to="/" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal" className="reqDemoBtn">Request a demo</Link>
+                        <Link
+                            to="/"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            className="reqDemoBtn"
+                        >
+                            Request a demo
+                        </Link>
                     </div>
                 </div>
                 <div className="col-12 col-sm-12 col-md-5">
-                    <div className='content_sec_5 mt-3'>
+                    <div
+                        className='content_sec_5 mt-3'
+                        {...ANIMATION_PRESETS.FADE_LEFT}
+                        data-aos-delay="200"
+                    >
                         <img className="img1" src={Home8} alt="GPU Cloud Strategy" />
                     </div>
                 </div>
@@ -119,7 +132,6 @@ const Section5 = () => {
                     </div>
                 </div>
             </div>
-
         </section>
     );
 };

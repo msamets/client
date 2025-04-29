@@ -1,12 +1,25 @@
 // App.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Features from './pages/Features';
 import Services from './pages/Services';
+import { initializeAnimations, refreshAnimations } from './utils/AnimationUtils';
 
 function App() {
+  useEffect(() => {
+    // Initialize animations
+    initializeAnimations();
+
+    // Refresh animations on window resize
+    window.addEventListener('resize', refreshAnimations);
+
+    return () => {
+      window.removeEventListener('resize', refreshAnimations);
+    };
+  }, []);
+
   return (
     <Router>
       <div>
